@@ -1,49 +1,49 @@
-<!doctype html>
-<html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#041526">
-  <title>VEXORA 0.0.3 · Juega en tu navegador</title>
-  <link rel="icon" href="assets/vexora-alpha.png">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<main id="app">
-  <section id="menu" aria-label="Menú principal">
-    <div class="brand"><img src="assets/vexora-alpha.png" alt="VEXORA ALPHA"><p>UN MUNDO POR DESCUBRIR</p></div>
-    <nav aria-label="Navegación principal">
-      <button class="primary" data-start="1">▶ &nbsp; JUGAR</button>
-      <button data-dialog="levels">▥ &nbsp; NIVELES</button>
-      <button data-dialog="tops">★ &nbsp; TOPS</button>
-      <button data-dialog="customize">✦ &nbsp; PERSONALIZACIÓN</button>
-      <button data-dialog="options">⚙ &nbsp; CONFIGURACIÓN</button>
-      <button data-dialog="credits">ⓘ &nbsp; CRÉDITOS</button>
-      <a class="button" href="https://discord.gg/YE2MkDNNwH" target="_blank" rel="noopener noreferrer">↗ &nbsp; DISCORD</a>
-    </nav>
-    <div class="dashboard">
-      <div class="levels">
-        <button class="level-card" data-start="1"><strong>NIVEL 1</strong><span class="preview"><img src="assets/player-robot.png" alt=""></span><span>Zona Cero</span><small>Explora · Doble salto<br>Activa los tres núcleos</small></button>
-        <button class="level-card gold" data-start="2"><strong>NIVEL 2</strong><span class="preview"><img src="assets/player-robot.png" alt=""></span><span>Fortaleza del Eclipse</span><small>Clic izquierdo: disparar<br>Elimina los seis drones</small></button>
-      </div>
-      <div class="lower-panels">
-        <article class="panel news"><h2>NOVEDADES</h2>
-          <details><summary>VEXORA ya se juega en la web</summary><p>Los dos primeros niveles están disponibles directamente en tu navegador. No necesitas instalar el juego.</p></details>
-          <details><summary>El desafío del Eclipse</summary><p>Dispara con el clic izquierdo, derrota a los seis drones y activa los tres núcleos. Puedes saltar dos veces y usar Shift para impulsarte.</p></details>
-          <details><summary>Próximamente: nivel 3</summary><p>La aventura continuará. El tercer nivel todavía está en desarrollo.</p></details>
-        </article>
-        <article class="panel"><h2>VEXORA WEB</h2><p>Creado por <b>vdavidc</b></p><p>Partida individual.<br>Récords en este navegador.</p><span class="badge">ALPHA 0.0.3</span></article>
-      </div>
-    </div>
-    <footer>WASD / FLECHAS · ESPACIO ×2 · E: NÚCLEOS · SHIFT: IMPULSO</footer>
-  </section>
-  <section id="play" hidden aria-label="Partida">
-    <canvas id="game" width="1280" height="720" tabindex="0" aria-label="VEXORA: usa las flechas para moverte, espacio para saltar y E para activar núcleos"></canvas>
-    <div class="game-actions"><button id="pause-button">Ⅱ Pausa</button><button class="fullscreen">⛶ Pantalla completa</button></div>
-    <div id="touch-controls" aria-label="Controles táctiles"><button data-key="ArrowLeft">◀</button><button data-key="ArrowRight">▶</button><button data-action="jump">SALTAR</button><button data-action="interact">E</button><button data-key="fire">DISPARAR</button></div>
-  </section>
-</main>
-<dialog id="dialog"><button id="close-dialog" aria-label="Cerrar">×</button><div id="dialog-content"></div></dialog>
-<div id="toast" role="status" hidden></div>
-<script src="game.js"></script>
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#041526">
+  <title>VEXORA 0.0.3 · Juega en tu navegador</title>
+  <link rel="icon" href="assets/vexora-alpha.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+  <section id="menu" aria-label="Menú principal">
+    <div class="brand"><img src="assets/vexora-alpha.png" alt="VEXORA ALPHA"><p>UN MUNDO POR DESCUBRIR</p></div>
+    <nav aria-label="Navegación principal">
+      <button class="primary" data-start="1">▶ &nbsp; JUGAR</button>
+      <button data-dialog="levels">▥ &nbsp; NIVELES</button>
+      <button data-dialog="tops">★ &nbsp; TOPS</button>
+      <button data-dialog="customize">✦ &nbsp; PERSONALIZACIÓN</button>
+      <button data-dialog="options">⚙ &nbsp; CONFIGURACIÓN</button>
+      <button data-dialog="credits">ⓘ &nbsp; CRÉDITOS</button>
+      <a class="button" href="https://discord.gg/YE2MkDNNwH" target="_blank" rel="noopener noreferrer">↗ &nbsp; DISCORD</a>
+    <a href="#jugar">Jugar</a></nav>
+    <div class="dashboard">
+      <div class="levels">
+        <button class="level-card" data-start="1"><strong>NIVEL 1</strong><span class="preview"><img src="assets/player-robot.png" alt=""></span><span>Zona Cero</span><small>Explora · Doble salto<br>Activa los tres núcleos</small></button>
+        <button class="level-card gold" data-start="2"><strong>NIVEL 2</strong><span class="preview"><img src="assets/player-robot.png" alt=""></span><span>Fortaleza del Eclipse</span><small>Clic izquierdo: disparar<br>Elimina los seis drones</small></button>
+      </div>
+      <div class="lower-panels">
+        <article class="panel news"><h2>NOVEDADES</h2>
+          <details><summary>VEXORA ya se juega en la web</summary><p>Los dos primeros niveles están disponibles directamente en tu navegador. No necesitas instalar el juego.</p></details>
+          <details><summary>El desafío del Eclipse</summary><p>Dispara con el clic izquierdo, derrota a los seis drones y activa los tres núcleos. Puedes saltar dos veces y usar Shift para impulsarte.</p></details>
+          <details><summary>Próximamente: nivel 3</summary><p>La aventura continuará. El tercer nivel todavía está en desarrollo.</p></details>
+        </article>
+        <article class="panel"><h2>VEXORA WEB</h2><p>Creado por <b>vdavidc</b></p><p>Partida individual.<br>Récords en este navegador.</p><span class="badge">ALPHA 0.0.3</span></article>
+      </div>
+    </div>
+    <footer>WASD / FLECHAS · ESPACIO ×2 · E: NÚCLEOS · SHIFT: IMPULSO</footer>
+  </section>
+  <section id="play" hidden aria-label="Partida">
+    <canvas id="game" width="1280" height="720" tabindex="0" aria-label="VEXORA: usa las flechas para moverte, espacio para saltar y E para activar núcleos"></canvas>
+    <div class="game-actions"><button id="pause-button">Ⅱ Pausa</button><button class="fullscreen">⛶ Pantalla completa</button></div>
+    <div id="touch-controls" aria-label="Controles táctiles"><button data-key="ArrowLeft">◀</button><button data-key="ArrowRight">▶</button><button data-action="jump">SALTAR</button><button data-action="interact">E</button><button data-key="fire">DISPARAR</button></div>
+  </section>
+<section class="section" id="jugar"><div class="overline">VEXORA WEB</div><h2 class="section-title">Jugar en la web</h2><div class="community"><div><h3>Tu aventura, directamente en el navegador.</h3><p class="sub">Explora los dos primeros niveles sin instalar nada. Partida individual con doble salto y combate. Tus récords se guardan en este navegador.</p></div><a class="button primary" href="jugar.html">▶ JUGAR AHORA</a></div></section></main>
+<dialog id="dialog"><button id="close-dialog" aria-label="Cerrar">×</button><div id="dialog-content"></div></dialog>
+<div id="toast" role="status" hidden></div>
+<script src="game.js"></script>
 </body></html>
